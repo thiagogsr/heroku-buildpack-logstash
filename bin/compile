@@ -17,11 +17,11 @@ mkdir -p $CACHE_DIR
 if [ -f $CACHE_DIR/logstash-$VERSION.tar.gz ]; then
   echo "Logstash package already detected in cache, skipping download."
 else
-  echo "Downloading Logstash into $CACHE_DIR..."
+  echo -n "Downloading Logstash into $CACHE_DIR... "
   curl --silent --location $LOGSTASH_URL -o $CACHE_DIR/logstash-$VERSION.tar.gz
-  echo "...done"
+  echo "done"
 fi
 
-echo "Unpacking Logstash..."
+echo -n "Unpacking Logstash... "
 tar -xzf $CACHE_DIR/logstash-$VERSION.tar.gz -C $BUILD_DIR
-echo "...done"
+echo "done"
