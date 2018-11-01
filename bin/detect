@@ -1,9 +1,4 @@
 #!/bin/sh
 
-if type -p java; then
-  echo "Logstash"
-  exit 0
-else
-  echo "Java not installed!"
-  exit 1
-fi
+echo "Logstash"
+exit 0
