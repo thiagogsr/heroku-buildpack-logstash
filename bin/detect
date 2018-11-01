@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if type -p java; then
+  echo "Logstash"
   exit 0
 else
   echo "Java not installed!"
