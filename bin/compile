@@ -4,7 +4,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-if [[ -f $BUILD_DIR/.version ]]; then
+if [ -f $BUILD_DIR/.version ]; then
   VERSION=$(head -n 1 $BUILD_DIR/.version)
 else
   VERSION="6.4.2"
@@ -14,7 +14,7 @@ LOGSTASH_URL="https://artifacts.elastic.co/downloads/logstash/logstash-$VERSION.
 
 mkdir -p $CACHE_DIR
 
-if [[ -f $CACHE_DIR/logstash-$VERSION.tar.gz ]]; then
+if [ -f $CACHE_DIR/logstash-$VERSION.tar.gz ]; then
   echo "Logstash package already detected in cache, skipping download."
 else
   echo "Downloading Logstash into $CACHE_DIR..."
