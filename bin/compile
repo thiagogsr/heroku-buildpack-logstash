@@ -24,4 +24,5 @@ fi
 
 echo -n "Unpacking Logstash... "
 tar -xzf $CACHE_DIR/logstash-$VERSION.tar.gz -C $BUILD_DIR
+mv $BUILD_DIR/logstash-$VERSION/* $BUILD_DIR
 echo "done"
